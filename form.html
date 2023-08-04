@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Kush Patel" />
+    <meta name="description" content="Allows users to set order details" />
+
+    <title>Vendor Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="heading-container">
+        <h1>Order Form</h1>
+    </div>
+
+    <div class="form-container">
+        <form class="order-form">
+
+            <div class="order-general">
+                <div class="form-element">
+                    <label for="order-date">Date: </label>
+                    <input class="input-box" type="date" id="order-date" name="order-date">
+                    <div class="invalid-input d-none date-feedback">
+                        Please enter a valid date!!!
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <label for="po-number">P.O. Number: </label>
+                    <input class="input-box" type="text" name="po-number" id="po-number">
+                    <div class="invalid-input d-none po-feedback">
+                        Please enter a P.O. Number!!!
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-stakeholders">
+                <div class="form-element">
+                    <label for="vendor-list">Vendors: </label>
+                    <select class="input-box" name="vendor-list" id="vendor-list">
+                        <option value=""> --None Selected-- </option>
+                    </select>
+                    <div class="invalid-input d-none vendor-feedback">
+                        Please select a vendor!!!
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <label for="ship-to">Ship To: </label>
+                    <select class="input-box" name="ship-to" id="ship-to">
+                        <option value=""> --None Selected-- </option>
+                    </select>
+                    <div class="invalid-input d-none ship-to-feedback">
+                        Please select a ship to address!!!
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="product-details">
+                <div class="one-product">
+                    <div class="form-element">
+                        <label for="product-description">Product Name/Description: </label>
+                        <input class="input-box" type="text" name="product-description" id="product-description">
+                        <div class="invalid-input d-none name-feedback">
+                            Please enter a product name!!!
+                        </div>
+                    </div>
+
+
+                    <div class="form-element">
+                        <label for="quantity">Qty Approx: </label>
+                        <input class="input-box" type="text" name="quantity" id="quantity">
+                        <div class="invalid-input d-none quantity-feedback">
+                            Please enter quantity for your order!!!
+                        </div>
+                    </div>
+
+
+                    <div class="form-element">
+                        <label for="unit-price">Unit Price: </label>
+                        <input class="input-box" type="text" name="unit-price" id="unit-price">
+                        <div class="invalid-input d-none unit-feedback">
+                            Please enter the unit price of the product!!!
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-element">
+                <button class="add-button" type="click"> Add Another Product </button>
+            </div>
+
+            <div class="order-logistics">
+                <div class="form-element">
+                    <label for="delivery-method">Delivery Method: </label>
+                    <select class="input-box" name="delivery-method" id="delivery-method">
+                        <option value=""> --None Selected-- </option>
+                    </select>
+                    <div class="invalid-input d-none delivery-feedback">
+                        Please select a delivery method for your order!!!
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <label for="payment-terms">Payment Terms: </label>
+                    <select class="input-box" name="payment-terms" id="payment-terms">
+                        <option value=""> --None Selected-- </option>
+                    </select>
+                    <div class="invalid-input d-none payment-feedback">
+                        Please select the payment terms of your order!!!
+                    </div>
+                </div>
+
+                <div class="form-element">
+                    <label for="against-quote">Against Quote Number: </label>
+                    <input class="input-box" type="number" name="against-quote" id="against-quote">
+                    <div class="invalid-input d-none against-quote-feedback">
+                        Please enter a numeric Against Quote Number!!!
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="other-details">
+
+                <div class="form-element">
+                    <label for="discount">Discount: </label>
+                    <input class="input-box" type="text" name="discount" id="discount">
+                    <div class="invalid-input d-none discount-feedback">
+                        Please enter a discount amount. If none, add 0!!!
+                    </div>    
+                </div>
+                
+                <div class="form-element">
+                    <label for="other-costs">Other Costs: </label>
+                    <input class="input-box" type="text" name="other-costs" id="other-costs">
+                    <div class="invalid-input d-none other-costs-feedback">
+                        Please enter other costs. If none, add 0!!!
+                    </div>    
+                </div>
+                
+                <div class="form-element">
+                    <label for="gst-vat-rate">GST/VAT Rate: </label>
+                    <input class="input-box" type="text" name="gst-vat-rate" id="gst-vat-rate">
+                    <div class="invalid-input d-none gst-vat-feedback">
+                        Please enter GST/VAT Rate. If none, add 0!!!
+                    </div>
+                </div>
+
+                <div class="form-element">
+                    <label for="note">Note: </label>
+                    <input class="input-box" type="text" name="note" id="note">
+                </div>
+                
+
+            </div>
+
+            <div class="form-element">
+                <button class="submit-button" type="click"> Submit </button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="summary-container d-none">
+        <div class="heading-container">
+            <h2>Purchase Order</h2>
+        </div>
+
+        <div class="date-po-container">
+            
+        </div>
+
+
+        <div class="order-specifics">
+
+            <div class="order-stakeholders-container">
+                <div class="vendor-ship-to">
+
+                </div>
+            </div>
+
+            <div class="order-logistics-container">
+                <div class="delivery-payment">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="summary-table">
+                <tr>
+                    <th>SR. NO.</th>
+                    <th>Product Name/Description</th>
+                    <th>Qty Approx</th>
+                    <th>Unit Price</th>
+                    <th>Total</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="additional-info-container">
+            
+        </div>
+    </div>
+
+    <script type="module" src="./vendor.js"></script>
+
+</body>
+
+</html>

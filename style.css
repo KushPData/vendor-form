@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+
+.order-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    background-color: #A8D3E8;
+}
+
+
+h1 {
+    text-align: center;
+    color: rgb(19, 81, 83);
+    font-size: 32px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-size: 18px;
+    color: blue;
+    text-align: right;
+}
+
+.order-stakeholders,
+.one-product,
+.order-logistics, 
+.other-details {
+    display: flex;
+    /* border-style: solid; */
+    margin: 5px;
+}
+
+.order-general {
+    display: flex;
+    flex-direction: column;
+    justify-items: right;
+}
+
+.input-box {
+    height: 25px;
+    width: 150px;
+    text-align: center;
+}
+
+.form-element {
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.d-none {
+    display: none;
+}
+
+td {
+    text-align: center;
+    border: 1px solid;
+    height: 20px;
+}
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    border: 1px solid;
+    border-color: black;
+    background-color: blue;
+    color: white;
+}
+
+.invalid-input {
+    color: red;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.summary-table tr td:last-child {
+    background-color: lightgrey;
+}
+
+.greater-height {
+    line-height: 50px;
+}
+
+.vendor-ship-to td {
+    width: 50%;
+}
+
+.vendor-ship-to, .delivery-payment {
+    margin-bottom: 20px;
+}
+
+.delivery-payment td {
+    width: 33%;
+}
+
+.date-po-container table {
+    border: none;
+    width: 30%;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.date-po-container tr td:last-child {
+    border: 1px solid;
+}
+
+.date-po-container td {
+    border: none;
+    width: 50px;
+}
+
+.date-po-container tr td:first-child {
+    text-align: right;
+    padding: 5px;
+}
+
+.note-date, .calculation-signature {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+.note-place {
+    height: 80%;
+    border: 1px solid;
+}
+
+.additional-info-container {
+    margin-top: 20px;
+}
