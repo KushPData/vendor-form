@@ -3,7 +3,7 @@
 import { makeRow } from "./makeRow.js";
 
 export function makeSummary(place, note, date, discount, otherCosts, gstVatRate, gstVatValue, total) {
-    const noteDate = document.createElement("span");
+    const noteDate = document.createElement("div");
     noteDate.classList.add("note-date");
 
     const notePlace = document.createElement("div");
@@ -19,7 +19,7 @@ export function makeSummary(place, note, date, discount, otherCosts, gstVatRate,
 
     place.appendChild(noteDate);
 
-    const calculationSignature = document.createElement("span");
+    const calculationSignature = document.createElement("div");
     calculationSignature.classList.add("calculation-signature");
 
     const calculationTable = document.createElement("table");

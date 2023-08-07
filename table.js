@@ -12,6 +12,9 @@ export class table {
         submit.addEventListener("click", function (event) {
             event.preventDefault();
 
+            const printPreview = document.querySelector(".print-preview");
+            printPreview.classList.remove("d-none");
+
             let date = document.querySelector("#order-date").value;
             let poNumber = document.querySelector("#po-number").value;
             let vendorValue = document.getElementById("vendor-list").value;
@@ -107,6 +110,14 @@ export class table {
                 for (let i = 0; i < productValueArray.length; i++) {
                     rowsArray.push(addData(i + 1, productValueArray[i], quantityValueArray[i], unitValueArray[i], quantityValueArray[i] * unitValueArray[i]));
                     grandTotal = grandTotal + (quantityValueArray[i] * unitValueArray[i]);
+                }
+
+                const numberOfRows = rowsArray.length;
+
+                if(numberOfRows < 15) {
+                    for(let i = 0; i < 15 - numberOfRows; i++) {
+                        rowsArray.push(addData("","","","",""));
+                    }
                 }
 
 

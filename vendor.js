@@ -27,6 +27,7 @@ vendors.makeDropDownList(paymentTermsPlace, paymentTermsList, "");
 
 const add = document.querySelector(".add-button");
 const addProduct = new product();
+let numberOfProducts = 0;
 addProduct.createProduct(add);
 
 const submit = document.querySelector(".submit-button");

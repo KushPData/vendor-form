@@ -92,6 +92,10 @@ th {
     margin: 5px;
 }
 
+.summary-table tr {
+    height: 20px;
+}
+
 .summary-table tr td:last-child {
     background-color: lightgrey;
 }
@@ -128,7 +132,7 @@ th {
 
 .date-po-container td {
     border: none;
-    width: 50px;
+    width: 80px;
 }
 
 .date-po-container tr td:first-child {
@@ -136,17 +140,45 @@ th {
     padding: 5px;
 }
 
-.note-date, .calculation-signature {
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-}
-
 .note-place {
-    height: 120px;
+    height: 150px;
     border: 1px solid;
+    padding: 5px;
 }
 
 .additional-info-container {
     margin-top: 20px;
+    display: flex;
+    border: 1px solid;
+}
+
+.additional-info-container tr {
+    height: 20px;
+}
+
+.note-date, .calculation-signature {
+    flex: 1;
+    height: 180px;
+}
+
+.date-place {
+    height: 30px;
+    border: 1px solid;
+    padding: 5px;
+}
+
+.signature {
+    height: 60px;
+    padding: 5px;
+}
+
+.print-preview {
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    margin: 20px;
+}
+
+.excess-feedback {
+    text-align: center;
 }
