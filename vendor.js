@@ -3,6 +3,7 @@ import { dropdown } from "./dropdown.js";
 import { table } from "./table.js";
 import { product } from "./product.js";
 import data from './public/vendorData.json' assert { type: "json" };
+import { printPreview } from "./printPreview.js";
 
 const vendors = new dropdown();
 const vendorsList = vendors.findArray(data, "VendorList");
@@ -32,3 +33,6 @@ const submit = document.querySelector(".submit-button");
 const summary = new table();
 
 summary.createTable(submit);
+
+const printPreviewButton = document.querySelector(".print-preview-button");
+printPreview(printPreviewButton);
